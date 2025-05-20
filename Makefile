@@ -1,4 +1,3 @@
-
 CC = cc
 CFLAGS = -std=c90 -pedantic -Wall -Wextra
 TARGET = memwatch
@@ -6,7 +5,7 @@ SRC = memwatch.c
 PREFIX = /usr
 BINDIR = $(PREFIX)/bin
 MANDIR = $(PREFIX)/share/man
-.PHONY: all clean install uninstall
+.PHONY: all clean install uninstall install-man uninstall-man
 all: $(TARGET)
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $^
