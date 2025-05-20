@@ -5,6 +5,7 @@ TARGET = memwatch
 SRC = memwatch.c
 PREFIX = /usr
 BINDIR = $(PREFIX)/bin
+MANDIR = $(PREFIX)/share/man
 .PHONY: all clean install uninstall
 all: $(TARGET)
 $(TARGET): $(SRC)
@@ -15,3 +16,8 @@ uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 clean:
 	rm -f $(TARGET)
+install-man:
+	mkdir -p $(DESTDIR)$(MANDIR)/man1
+	cp memwatch.1 $(DESTDIR)$(MANDIR)/man1/
+uninstall-man:
+	rm -f $(DESTDIR)$(MANDIR)/man1/memwatch.1
