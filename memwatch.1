@@ -1,0 +1,33 @@
+.TH MEMWATCH 1 "May 2025" "memwatch 1.0" "User Commands"
+.SH NAME
+memwatch \- displays memory usage table of all processes
+.SH SYNOPSIS
+.B memwatch
+.RI [ --no-header ]
+.SH DESCRIPTION
+.B memwatch
+prints a POSIX-compliant table of memory usage (in kilobytes) by all current processes.  
+The table consists of three tab-separated columns:
+
+.TP
+.B PID
+Process ID
+
+.TP
+.B NAME
+Process executable name
+
+.TP
+.B MEM_kB
+Memory usage in kilobytes
+
+.SH OPTIONS
+.TP
+.BR --no-header
+Do not print the table header (PID, NAME, MEM_kB).
+
+.SH SEE ALSO
+ps(1), top(1), grep(1), sort(1)
+
+.SH AUTHOR
+rost <https://github.com/R0STUS>
