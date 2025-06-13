@@ -10,7 +10,7 @@ all: $(TARGET)
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $^
 install: $(TARGET)
-	install -Dm755 $(TARGET) $(BINDIR)/&(TARGET)
+	install -Dm755 $(TARGET) $(BINDIR)/$(TARGET)
 uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 clean:
