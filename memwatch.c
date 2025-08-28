@@ -42,7 +42,7 @@ void checkForHeader(int argc, char* argv[]) {
 	int i;
 	for (i = 0; i < argc; i++) {
 		if (strcmp(argv[i], "--no-header")) enableHeader = 0;
-	}
+	} /* If I need additional parameters, I'll use GNU argp. At the moment, this is not necessary. */
 }
 
 int main(int argc, char* argv[]) {
